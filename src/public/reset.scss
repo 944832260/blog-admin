@@ -1,0 +1,44 @@
+html, body {
+  height: 100%;
+  color: #999999;
+}
+#root {
+  font-size: 12px;
+  height: 100%;
+}
+
+html, body, p, ul, li, img, input, textarea, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+  list-style: none;
+}
+
+// 超出隐藏
+.overflowText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+input, textarea {
+  border: none;
+  background: none;
+  outline: none;
+  border-radius: 6px;
+  font-size: 12px;
+  resize: none;
+  &::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ccc;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ccc;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ccc;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #ccc;
+  }
+}

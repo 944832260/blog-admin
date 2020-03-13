@@ -1,0 +1,38 @@
+// {
+//     "presets": [
+//       "@babel/preset-env",//在不进行任何配置的情况下，@babel/preset-env 所包含的插件将支持所有最新的JS特性(ES2015,ES2016等，不包含 stage 阶段)，将其转换成ES5代码。
+//       "@babel/preset-react"
+//     ],
+//     "plugins": [
+//       "@babel/plugin-syntax-dynamic-import", //用以解析识别import()动态导入语法---并非转换
+//       "@babel/plugin-transform-runtime",
+//       "@babel/plugin-proposal-class-properties",
+//       "react-hot-loader/babel",
+//       ["import", {
+//         "libraryName": "antd",
+//         "style": "css"
+//       }]
+//     ]
+//   }
+// 插件在 Presets 前运行。
+// 插件顺序从前往后排列。
+// Preset 顺序是颠倒的（从后往前）。
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+		// "react-hot-loader/babel",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-class-properties",
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": "css" // `style: true` 会加载 less 文件
+      }
+    ]
+  ]
+}
