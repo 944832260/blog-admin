@@ -50,6 +50,7 @@ const moduleConfigDev = {
             loader: "file-loader",
             exclude: /node_modules/,
             query: {
+                esModule: false,//file-loader在5.0版本更新中默认为了true，所以显示 [object Module]
                 limit: 5000,
                 name: "image/[name].[hash:8].[ext]"
             }
@@ -59,6 +60,7 @@ const moduleConfigDev = {
             loader: "url-loader",
             exclude: /node_modules/,
             query: {
+                esModule: false,//file-loader在5.0版本更新中默认为了true，所以显示 [object Module]
                 limit: 5000,
                 name: "font/[name].[hash:8].[ext]"
             }
