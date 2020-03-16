@@ -1,34 +1,33 @@
 import { lazy } from 'react'
-import Home from '../components/home/home'
 
 
 const Config = [
 	{
 		path: "/login",
-		component: lazy(() => import("@components/login/login")),
+		component: lazy(() => import("@pages/login/login")),
 		exact: true,
 	},
 	{
 		path: '/',
-		component: Home,
-		routesLeft: [
+		component: lazy(() => import("@components/layout/layout")),
+		routes: [
 			{
 				path: '/',
 				name: "首页",
 				exact: true,
-				component: Home,
+				component:  lazy(() => import("@pages/home/home")),
 			},
 			{
 				path: '/home',
 				name: "首页",
 				exact: true,
-				component: Home,
+				component: lazy(() => import("@pages/home/home")),
 			}
 		]
 	},
 	{
 		path: "*",
-		component: Home,
+		component: lazy(() => import("@pages/404/404")),
 		exact: true,
 	},
 ];

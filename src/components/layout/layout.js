@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu,Icon  } from 'antd';
+import { HomeOutlined, MenuFoldOutlined, MenuUnfoldOutlined , } from '@ant-design/icons';
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
-import './layout.less'
+import './layout.scss'
 import Navconfig from './nav.config.js'
-
 
 export default class Layouto extends Component {
     constructor(props) {
@@ -92,6 +92,7 @@ export default class Layouto extends Component {
                     >
                         <div className="logo" >LOGO</div>
                         <Menu
+                            className='icons'
                             defaultSelectedKeys={currentMenu}
                             mode="inline"
                             theme="dark"
@@ -106,7 +107,7 @@ export default class Layouto extends Component {
                                                 key={e.path}
                                                 title={
                                                     <span>
-                                                        <Icon type="appstore" />
+                                                    <HomeOutlined />
                                                         <span>{e.name}</span>
                                                     </span>
                                                 }
@@ -121,7 +122,7 @@ export default class Layouto extends Component {
                                     } else {
                                         return (
                                             <Menu.Item key={e.path} onClick={() => { this.router(e.path) }}>
-                                                <Icon type="pie-chart" />
+                                                <HomeOutlined />
                                                 <span>{e.name}</span>
                                             </Menu.Item>
                                         )
@@ -133,11 +134,10 @@ export default class Layouto extends Component {
                     </Sider>
                     <Layout className='layoutCD'>
                         <Header style={{ background: '#fff', padding: 0 }}>
-                            <Icon
-                                className="trigger"
-                                type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-                                onClick={this.toggle}
-                            />
+                        {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+              className: 'trigger',
+              onClick: this.toggle,
+            })}
                         </Header>
                         <Content
                             style={{

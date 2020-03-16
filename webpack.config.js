@@ -30,6 +30,7 @@ module.exports = {
             '@router': path.resolve(__dirname, "src/router"),
             '@store': path.resolve(__dirname, "src/store"),
             '@assets': path.resolve(__dirname, "src/assets"),
+            '@pages': path.resolve(__dirname, "src/pages"),
           },//配置短路径
         modules: ['node_modules'],//webpack 解析模块时应该搜索的目录，
     },
