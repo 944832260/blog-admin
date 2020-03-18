@@ -90,7 +90,7 @@ export default class Layouto extends Component {
                 <Layout className='layouDD'>
                     <Sider trigger={null} collapsible collapsed={collapsed}
                     >
-                        <div className="logo" >LOGO</div>
+                        <div className="logo" >我的博客</div>
                         <Menu
                             className='icons'
                             defaultSelectedKeys={currentMenu}
@@ -135,9 +135,9 @@ export default class Layouto extends Component {
                     <Layout className='layoutCD'>
                         <Header style={{ background: '#fff', padding: 0 }}>
                         {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-              className: 'trigger',
-              onClick: this.toggle,
-            })}
+                            className: 'trigger',
+                            onClick: this.toggle,
+                        })}
                         </Header>
                         <Content
                             style={{

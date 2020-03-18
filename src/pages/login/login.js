@@ -26,17 +26,17 @@ class Login extends React.Component {
 			<div id="login">
 				<div className='logo'>
 					<div className='logoLeft'>
-						<span className='company'>我的办公</span>
-						<span className='function'>智能办公</span>
+						<span className='company'>我的博客</span>
+						<span className='function'>海量日记</span>
 					</div>
 				</div>
 				<div className='content'>
 					<div className="back">
-						<p>新纪元智能办公软件</p>
+						<p>新纪元</p>
 						<img src={require('./images/logoBack.png')} alt=""/>
 					</div>
 					<div className="form">
-						<h1>我的办公智能办公系统</h1>
+						<h1>博客登陆</h1>
 						<div className="loginType">
 							<div className="icon">
 								<i className={`iconfont ${type === "captcha" ? "icon-User" : "icon-shouji"}`}
@@ -56,7 +56,7 @@ class Login extends React.Component {
 							<Input
 								name="mobile"
 								className="mobile"
-								placeholder={type === "captcha" ? "请输入手机号" : "请输入账号"}
+								placeholder="请输入账号"
 								onChange={e => {
 									type === "captcha" ? form.mobile = e.target.value : form.phone = e.target.value;
 								}}
