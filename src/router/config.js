@@ -22,13 +22,37 @@ const Config = [
 				name: "首页",
 				exact: true,
 				component: lazy(() => import("@pages/home/home")),
-			}
+			},
+			{
+				path: '/article',
+				name: "首页",
+				exact: true,
+				component: lazy(() => import("@pages/article/articleList/articleList")),
+			},
+			{
+				path: '/article/:id',
+				name: "首页",
+				exact: true,
+				component: lazy(() => import("@pages/article/articleDetail/articleDetail")),
+			},
+			{
+				path: '/user',
+				name: "首页",
+				exact: true,
+				component: lazy(() => import("@pages/user/user")),
+			},
+			{
+				path: '/user',
+				name: "首页",
+				exact: true,
+				component: lazy(() => import("@pages/user/user")),
+			},
+			{
+				path: "*",
+				component: lazy(() => import("@pages/404/404")),
+				exact: true,
+			},
 		]
-	},
-	{
-		path: "*",
-		component: lazy(() => import("@pages/404/404")),
-		exact: true,
 	},
 ];
 

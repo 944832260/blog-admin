@@ -1,0 +1,41 @@
+#user{
+    width: 100%;
+    
+    .edit{
+        width: 100%;
+        height: 30px;
+        margin-bottom: 20px;
+        .add{
+            height: 30px;
+            width: 80px;
+        }
+    }
+}
+
+.UserModal{
+    .content{
+        margin-bottom: 20px;
+        margin-top: 20px;
+        .item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // height: 30px;
+            margin-top: 10px;
+            .tip{
+                width: 76px;
+                // text-align: right;
+                margin-right: 10px;
+            }
+        }
+        .newadd{
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}
+.page{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

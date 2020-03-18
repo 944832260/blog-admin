@@ -18,7 +18,8 @@ export default class Layouto extends Component {
         }
 
     }
-    componentWillMount() {
+    
+    UNSAFE_componentWillMount() {
         let {history} = this.props;
         let token = ''
         // if (!token) {
@@ -107,7 +108,7 @@ export default class Layouto extends Component {
                                                 key={e.path}
                                                 title={
                                                     <span>
-                                                    <HomeOutlined />
+                                                        {e.icon}
                                                         <span>{e.name}</span>
                                                     </span>
                                                 }
@@ -122,7 +123,7 @@ export default class Layouto extends Component {
                                     } else {
                                         return (
                                             <Menu.Item key={e.path} onClick={() => { this.router(e.path) }}>
-                                                <HomeOutlined />
+                                                {e.icon}
                                                 <span>{e.name}</span>
                                             </Menu.Item>
                                         )

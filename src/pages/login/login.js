@@ -1,6 +1,6 @@
 import * as React from "react";
 import { connect } from 'react-redux'
-import { UpdateUSER } from "@store/actions/user"
+import { UpdateUser } from "@store/actions/user"
 import { Input, Button, message } from "antd"
 import "./login.scss"
 
