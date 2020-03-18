@@ -34,7 +34,7 @@ class ArticleList extends Component {
                     render: (text,index) => {
                         return (
                             <p>
-                                <a onClick={()=>{console.log(text)}} style={{paddingRight:'15px'}}>{'编辑'}</a>
+                                <a onClick={()=>{this.routerDetail(1)}} style={{paddingRight:'15px'}}>{'编辑'}</a>
                                 <a onClick={()=>{this.deleteads(text)}} style={{paddingRight:'15px'}}>{'删除'}</a>
                             </p>
                             
@@ -87,6 +87,9 @@ class ArticleList extends Component {
     closeModal = () =>{
         this.setState({IsModal:false,})
     }
+    routerDetail = (id) =>{
+        this.props.history.push('/article/'+id)
+    }
     render() {
         return (
             <div id='ArticleList'>
@@ -122,7 +125,7 @@ class ArticleList extends Component {
                     </div>
                 </Modal>
                 <div className='edit'>
-                    <Button className='add' type="primary" onClick={this.openModal} >新增</Button>
+                    <Button className='add' type="primary" onClick={()=>{this.routerDetail('add')}} >新增</Button>
                 </div>
                 <Table  columns={this.state.usertable} dataSource={this.state.userList} pagination={false} />
                 <Pagination className='page' onChange={this.pageChange} total={this.state.total} pageSize={this.state.pageSize} current = {this.state.page}  />

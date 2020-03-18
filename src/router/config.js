@@ -30,6 +30,12 @@ const Config = [
 				component: lazy(() => import("@pages/article/articleList/articleList")),
 			},
 			{
+				path: '/article/add',
+				name: "首页",
+				exact: true,
+				component: lazy(() => import("@pages/article/articleDetail/articleDetail")),
+			},
+			{
 				path: '/article/:id',
 				name: "首页",
 				exact: true,

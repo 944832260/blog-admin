@@ -134,11 +134,16 @@ export default class Layouto extends Component {
                         </Menu>
                     </Sider>
                     <Layout className='layoutCD'>
-                        <Header style={{ background: '#fff', padding: 0 }}>
-                        {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                            className: 'trigger',
-                            onClick: this.toggle,
-                        })}
+                        <Header className='header' style={{ background: '#fff', padding: 0 }}>
+                            {
+                                React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+                                    className: 'trigger',
+                                    onClick: this.toggle,
+                                })
+                            }
+                            <div className='header_d'>
+                                <img className='signout' src={require('../../assets/icons/signOut.png')} alt=""/>
+                            </div>
                         </Header>
                         <Content
                             style={{

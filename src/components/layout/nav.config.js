@@ -22,30 +22,17 @@ const Navconfig = [
     },
     {
         path:'/article',
-        name:'文章列表',
+        name:'文章管理',
         icon:<Article />,
-    },
-    {
-        name:'二级目录',
-        path:'ej',
-        icon:<SettingOutlined />,
         children:[
             {
-                path:'/c',
-                name:'C'
+                path:'/article',
+                name:'文章列表'
             },
-            {
-                path:'/d',
-                name:'D'
-            },
-            {
-                path:'/detail/c',
-                name:'detail'
-            }
         ]
     },
     {
-        name:'设置',
+        name:'系统设置',
         path:'sz',
         icon:<SettingOutlined />,
         children:[

@@ -17,6 +17,25 @@
             font-size: 20px;
         }
         .layoutCD{
+            .header{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                .header_d{
+                    height: 100%;
+                    width: 100%;
+                    position: relative;
+                    .signout{
+                        width: 28px;
+                        height: 28px;
+                        position: absolute;
+                        top: 50%;
+                        right: 100px;
+                        margin-top: -14px;
+                        cursor: pointer;
+                    }
+                }
+            }
             .layoutContent{
                 padding: 0;
                 margin: 0;

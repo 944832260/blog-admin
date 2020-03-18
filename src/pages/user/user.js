@@ -11,7 +11,7 @@ class User extends Component {
                 user:'admin',
                 id:1,
                 email:'944832260@qq.com',
-            }],
+            },],
             usertable:[
                 {
                   title: '用户编号',
@@ -53,6 +53,15 @@ class User extends Component {
             password1:'',
             password2:'',
         }
+    }
+    UNSAFE_componentWillMount(){
+        let {userList} = this.state;
+        for(let i=0;i<10;i++){
+            userList.push({
+                key:i+3
+            })
+        }
+        this.setState({userList})
     }
     pageChange = (page, pageSize) =>{
         this.setState({page},()=>{
