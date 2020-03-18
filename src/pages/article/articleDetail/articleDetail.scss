@@ -1,3 +1,31 @@
 #ArticleDetail{
     width: 100%;
+    padding-bottom: 40px;
+    .top{
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        .tip{
+            font-size: 24px;
+        }
+        
+    }
+    .title{
+        margin-bottom: 10px;
+    }
+    .myEditor{
+        display: inline;
+        .bf-controlbar{
+            box-shadow: none;
+        }
+        .bf-content{
+            border: 1px solid rgba($color: #000000, $alpha: 0.2);
+        }
+    }
+    .zhanweifu{
+        height: 20px;
+        width: 100%;
+    }
 }

@@ -13,7 +13,8 @@ const moduleConfigDev = {
             test: /\.css$/,
             include: [
               path.resolve(__dirname, "../src"),
-              path.resolve(__dirname, "../node_modules/antd")
+              path.resolve(__dirname, "../node_modules/antd"),
+              path.resolve(__dirname, "../node_modules/braft-editor"),
             ],
             use: [
                 MiniCssExtractPlugin.loader,
