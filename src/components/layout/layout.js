@@ -151,7 +151,7 @@ export default class Layouto extends Component {
                             }}
                             className='layoutContent'
                         >
-                            <div className='contentMain'>
+                            {/* <div className='contentMain'> */}
                                 <Switch>
                                     {
                                         routes.map((e) => {
@@ -167,7 +167,7 @@ export default class Layouto extends Component {
                                         })
                                     }
                                 </Switch>
-                            </div>
+                            {/* </div> */}
                         </Content>
                     </Layout>
                 </Layout>
