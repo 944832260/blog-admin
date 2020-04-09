@@ -59,7 +59,7 @@ module.exports = {
             new UglifyJsPlugin({
                 cache: true,//是否应用缓存
                 parallel: true,//是否并发，一起打包多个
-                sourceMap:true,//源码映射，为了更好的调试
+                sourceMap:IsDevelopment?true:false,//源码映射，为了更好的调试
             }),
             new OptimizeCssAssetsPlugin()
         ],
