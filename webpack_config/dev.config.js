@@ -1,5 +1,5 @@
 const proxy = [
-    { path: ['/api'], target: 'https://board.apluslabs.com'}
+    { path: ['/api/v1'], target: 'http://192.168.11.193:9999'}
 ];
   
   module.exports = {
