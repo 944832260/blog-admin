@@ -8,7 +8,7 @@ class ArticleList extends Component {
         this.state={
             userList:[{
                 key:1,
-                username:'和珅',
+                username:'1321s',
                 user:'admin',
                 id:1,
                 email:'944832260@qq.com',
@@ -51,6 +51,7 @@ class ArticleList extends Component {
             user:'',
             password1:'',
             password2:'',
+            value:'2',
         }
     }
     pageChange = (page, pageSize) =>{
@@ -128,6 +129,7 @@ class ArticleList extends Component {
                     <Button className='add' type="primary" onClick={()=>{this.routerDetail('add')}} >新增</Button>
                 </div>
                 <Table  columns={this.state.usertable} dataSource={this.state.userList} pagination={false} />
+                <Input value={this.state.value} onChange={(ev)=>{this.setState({value:ev.target.value})}} />
                 <Pagination className='page' onChange={this.pageChange} total={this.state.total} pageSize={this.state.pageSize} current = {this.state.page}  />
             </div>
         );

@@ -21,7 +21,7 @@ if (module.hot) {
 	module.hot.accept(() => {
 		ReactDom.render(
 			<APP />,
-			document.getElementById('root')
+			document.getElementById('mount')
 		)
 	})
 }

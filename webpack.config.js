@@ -11,8 +11,11 @@ let moduleConfig = require('./webpack_config/module.config')
 let pluginsConfig = require('./webpack_config/plugins.config')
 
 module.exports = {
-    entry:{
-        index:'./src/index.js'
+    entry: {
+        index:[
+            "react-hot-loader/patch",
+            path.resolve(__dirname, "./src/index.js"),
+          ]
     },
     devtool: IsDevelopment ?"source-map" : "cheap-module-source-map" ,
     output: {
@@ -48,7 +51,7 @@ module.exports = {
             }
         )),
         disableHostCheck: IsDevelopment?true:false,
-        // hot: true,
+        hot: true,
         // inline: false,
         host: devConfig.ip, //ip
         compress: true, // 服务端压缩
