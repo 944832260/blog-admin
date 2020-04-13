@@ -12,7 +12,7 @@ class Home extends Component {
     render() {
         return (
             <div id='home'>
-                home
+                homes
                 {/* <img src={require('../../assets/shopicon.png')} alt=""/> */}
                 <img src={require('../../assets/shopicon.png')} alt=""/>
             </div>

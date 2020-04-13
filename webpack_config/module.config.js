@@ -17,7 +17,7 @@ const moduleConfigDev = {
               path.resolve(__dirname, "../node_modules/braft-editor"),
             ],
             use: [
-                MiniCssExtractPlugin.loader,
+                'style-loader',
                 'css-loader', //@import 解析路径
                 'postcss-loader',
             ],
@@ -29,7 +29,7 @@ const moduleConfigDev = {
               path.resolve(__dirname, "../node_modules/antd")
             ],
             use: [
-                MiniCssExtractPlugin.loader,
+                'style-loader',
                 'css-loader',
                 'postcss-loader',
                 'less-loader',
@@ -40,7 +40,7 @@ const moduleConfigDev = {
               path.resolve(__dirname, "../src"),
             ],
             use: [
-                MiniCssExtractPlugin.loader,
+                'style-loader',
                 'css-loader',
                 'postcss-loader',
                 'sass-loader',
