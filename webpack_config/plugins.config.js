@@ -8,10 +8,10 @@ const pluginsConfig = [
 		filename: 'index.html',
 		template: './index.html',
 		hash: false,
-		minify: process.env.MODE == 'production'?{
+		minify: process.env.MODE == 'production' ? {
 			removeAttributeQuotes: true,//删除html的双引号
 			collapseWhitespace: true,//折叠成一行
-		}:false,//html压缩
+		} : false,//html压缩
 	}),
 	new MiniCssExtractPlugin({
 		filename: './css/[name][hash].css',

@@ -44,5 +44,4 @@ const Navconfig = [
     }
 ]
 
-
 export default Navconfig;

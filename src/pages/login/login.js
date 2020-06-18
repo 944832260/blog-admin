@@ -5,7 +5,6 @@ import { Input, Button, message } from "antd"
 import "./login.scss"
 
 
-
 class Login extends React.Component {
 	state = {
 		captcha: 0,
@@ -123,21 +122,5 @@ class Login extends React.Component {
 	}
 }
 
-function mapStateToProps(state) {
-	return {
-		USER: state.USER
-	}
-}
-
-function mapDispatchToProps(dispatch) {
-	return {
-		// 更新数据
-		UpdateUSER: (obj) => {
-			dispatch(UpdateUSER(obj));
-		}
-	}
-}
-
 
 export default Login;
-// export default connect(mapStateToProps, mapDispatchToProps)(Login);

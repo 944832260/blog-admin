@@ -12,9 +12,9 @@ const moduleConfigDev = {
         {
             test: /\.css$/,
             include: [
-              path.resolve(__dirname, "../src"),
-              path.resolve(__dirname, "../node_modules/antd"),
-              path.resolve(__dirname, "../node_modules/braft-editor"),
+                path.resolve(__dirname, "../src"),
+                path.resolve(__dirname, "../node_modules/antd"),
+                path.resolve(__dirname, "../node_modules/braft-editor"),
             ],
             use: [
                 'style-loader',
@@ -25,8 +25,8 @@ const moduleConfigDev = {
         {
             test: /\.less$/,
             include: [
-              path.resolve(__dirname, "../src"),
-              path.resolve(__dirname, "../node_modules/antd")
+                path.resolve(__dirname, "../src"),
+                path.resolve(__dirname, "../node_modules/antd")
             ],
             use: [
                 'style-loader',
@@ -37,7 +37,7 @@ const moduleConfigDev = {
         }, {
             test: /\.scss$/,
             include: [
-              path.resolve(__dirname, "../src"),
+                path.resolve(__dirname, "../src"),
             ],
             use: [
                 'style-loader',
@@ -78,8 +78,8 @@ const moduleConfigProd = {
         {
             test: /\.css$/,
             include: [
-              path.resolve(__dirname, "../src"),
-              path.resolve(__dirname, "../node_modules/antd")
+                path.resolve(__dirname, "../src"),
+                path.resolve(__dirname, "../node_modules/antd")
             ],
             use: [
                 MiniCssExtractPlugin.loader,
@@ -90,8 +90,8 @@ const moduleConfigProd = {
         {
             test: /\.less$/,
             include: [
-              path.resolve(__dirname, "../src"),
-              path.resolve(__dirname, "../node_modules/antd")
+                path.resolve(__dirname, "../src"),
+                path.resolve(__dirname, "../node_modules/antd")
             ],
             use: [
                 MiniCssExtractPlugin.loader,
@@ -102,7 +102,7 @@ const moduleConfigProd = {
         }, {
             test: /\.scss$/,
             include: [
-              path.resolve(__dirname, "../src"),
+                path.resolve(__dirname, "../src"),
             ],
             use: [
                 MiniCssExtractPlugin.loader,
