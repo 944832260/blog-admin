@@ -71,6 +71,12 @@ export default class Layouto extends Component {
             });
         }
     };
+    // 当前选中的菜单
+    menuChange = (ev) =>{
+        let currentMenu
+        currentMenu = ev.selectedKeys
+        this.setState({currentMenu})
+    }
     // 左侧边栏展开收起
     toggle = () => {
         this.setState({
@@ -94,11 +100,12 @@ export default class Layouto extends Component {
                         <div className="logo" >我的博客</div>
                         <Menu
                             className='icons'
-                            defaultSelectedKeys={currentMenu}
+                            selectedKeys={currentMenu}
                             mode="inline"
                             theme="dark"
                             openKeys={this.state.openKeys}
                             onOpenChange={this.onOpenChange}
+                            onSelect={(ev)=>{this.menuChange(ev)}}
                         >
                             {
                                 Navconfig.map((e, i) => {
